@@ -10,6 +10,9 @@ import { Component } from '@angular/core';
 })
 export class RecipeListComponent {
 
+
+
+
   constructor() { }
 
     recipes=[
@@ -18,8 +21,13 @@ export class RecipeListComponent {
       {id:3,name:'Fried Rice',description:'Fried rice is a dish of cooked rice that has been stir-fried in a wok or a frying pan and is usually mixed with other ingredients such as eggs, vegetables, seafood, or meat.'},
     ]
 
+    selectedRecipe?:any;
 
   ngOnInit() {
   }
+
+  onSelect(_recipe: any): void {
+     this.selectedRecipe = _recipe;
+    }
 
 }

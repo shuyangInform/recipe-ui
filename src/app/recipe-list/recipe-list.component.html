@@ -1,9 +1,14 @@
 <h2>recipe-list works!</h2>
 
+<div *ngIf="selectedRecipe">
+<br/>
+    <h4>{{selectedRecipe.name}}</h4>
+    <h4>{{selectedRecipe.description}}</h4>
+
+</div>
+
 <div *ngFor="let recipe of recipes">
-    <P>
+    <P (click)="onSelect(recipe)" style="cursor: pointer;">
         {{recipe.name}}
     </P>   
-
-        
 </div>
