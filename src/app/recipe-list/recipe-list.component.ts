@@ -1,14 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-recipe-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './recipe-list.component.html',
   styleUrl: './recipe-list.component.css'
 })
 export class RecipeListComponent {
+
 
 
 
@@ -28,6 +29,10 @@ export class RecipeListComponent {
 
   onSelect(_recipe: any): void {
      this.selectedRecipe = _recipe;
+    }
+
+    onDelete(_recipe: { id: number; name: string; description: string; }) {
+    this.recipes=this.recipes.filter(recipe=>recipe.id!=_recipe.id);  
     }
 
 }

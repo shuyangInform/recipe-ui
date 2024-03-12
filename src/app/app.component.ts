@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
